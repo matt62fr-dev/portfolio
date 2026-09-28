@@ -258,7 +258,7 @@ main {
     transform: scale(1.02);
 }
 
-/* --- Fenêtre Modale Livre Interactif (Sans Scroll) --- */
+/* --- Fenêtre Modale Livre Interactif --- */
 .video-modal {
     display: none;
     position: fixed;
@@ -306,34 +306,35 @@ main {
     justify-content: center;
 }
 
-.book-page {
+.book-page, 
+.boulanger-page, 
+.soutenance-page {
     display: none;
     width: 100%;
     height: 100%;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 1rem;
     animation: fadeIn 0.4s ease-in-out;
 }
 
-.book-page.active {
+.book-page.active, 
+.boulanger-page.active, 
+.soutenance-page.active {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/* S'assure que le lecteur PDF intégré s'adapte exactement au cadre sans scroll */
-.book-page object {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    border: none;
-    background-color: #ffffff;
-}
-
-.book-page img {
+.book-page img, 
+.boulanger-page img, 
+.soutenance-page img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
 }
 
 @keyframes fadeIn {
@@ -387,16 +388,6 @@ main {
     color: var(--accent);
 }
 
-/* --- Footer --- */
-footer {
-    background-color: var(--card-bg);
-    border-top: 1px solid var(--border);
-    text-align: center;
-    padding: 2rem;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-}
-
 /* --- Animation Scroll Reveal --- */
 .reveal {
     opacity: 0;
@@ -423,7 +414,7 @@ footer {
     }
 }
 
-.contact-info-card {
+.contact-info-card, .contact-form-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 20px;
@@ -458,14 +449,6 @@ footer {
     font-size: 1.2rem;
     color: var(--primary);
     flex-shrink: 0;
-}
-
-.contact-form-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 2.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -527,13 +510,12 @@ textarea.form-control {
 }
 
 /* Timeline pour le parcours */
-/* --- Correction de la Timeline (Parcours) --- */
 .timeline {
     position: relative;
-    padding-left: 2rem; /* Augmenté pour laisser respirer le texte */
+    padding-left: 2rem;
     border-left: 2px solid var(--primary);
     margin-top: 1.5rem;
-    margin-left: 0.5rem; /* Évite de coller au bord de la carte */
+    margin-left: 0.5rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -546,7 +528,7 @@ textarea.form-control {
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: calc(-2rem - 6px); /* Aligne parfaitement le point sur la ligne verticale */
+    left: calc(-2rem - 6px);
     top: 6px;
     width: 10px;
     height: 10px;
@@ -679,121 +661,9 @@ textarea.form-control {
     justify-content: space-between;
 }
 
-/* --- Style raffiné pour les pages des livres interactifs --- */
-.book-page, .boulanger-page {
-    display: none;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.03); /* Fond subtil */
-    border-radius: 12px;
-    padding: 1rem;
-    animation: fadeIn 0.4s ease-in-out;
-}
-
-.book-page.active, .boulanger-page.active {
-    display: flex;
-}
-
-.book-page img, .boulanger-page img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 6px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    background-color: #ffffff; /* Fond blanc pour les pages de document */
-}
-
-.book-page, .boulanger-page, .soutenance-page {
-    display: none;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.03);
-    border-radius: 12px;
-    padding: 1rem;
-    animation: fadeIn 0.4s ease-in-out;
-}
-
-.book-page.active, .boulanger-page.active, .soutenance-page.active {
-    display: flex;
-}
-
-.book-page img, .boulanger-page img, .soutenance-page img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 6px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    background-color: #ffffff;
-}
-
 /* ========================================= */
-/* --- RESPONSIVE DESIGN GLOBALE & EXPERT --- */
+/* --- FOOTER PRO & DESIGN --- */
 /* ========================================= */
-
-@media (max-width: 950px) {
-    /* Navigation mobile simplifiée */
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.75rem;
-    }
-
-    /* Passage des grilles 2 ou 3 colonnes en 1 seule colonne sur tablette/mobile */
-    .grid, 
-    .parcours-grid, 
-    .contact-wrapper, 
-    .preview-grid {
-        grid-template-columns: 1fr !important;
-        gap: 1.5rem;
-    }
-
-    /* Ajustement des titres principaux pour éviter les débordements */
-    h1 {
-        font-size: 2.25rem !important;
-    }
-
-    main {
-        padding: 1.5rem 1rem !important;
-    }
-}
-
-@media (max-width: 600px) {
-    /* Grilles de visuels (projets) en 1 colonne sur smartphone */
-    .visual-grid-3, 
-    .visual-grid-2 {
-        grid-template-columns: 1fr !important;
-    }
-
-    /* Adaptation des modales (livres interactifs) en plein écran mobile */
-    .modal-content {
-        width: 95% !important;
-        height: 85vh !important;
-        padding: 1rem !important;
-    }
-
-    .book-btn {
-        padding: 0.5rem 0.75rem !important;
-        font-size: 0.85rem !important;
-    }
-
-    /* Boutons pleine largeur sur mobile pour le confort tactile */
-    .hero-section .btn,
-    .contact-form-card button[type="submit"] {
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-    }
-/* --- Footer Pro & Design --- */
 .site-footer {
     background-color: var(--card-bg);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -876,18 +746,64 @@ textarea.form-control {
     opacity: 0.8;
 }
 
-/* --- Responsive Footer --- */
-@media (max-width: 768px) {
+/* ========================================= */
+/* --- RESPONSIVE DESIGN GLOBAL --- */
+/* ========================================= */
+@media (max-width: 950px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .grid, 
+    .parcours-grid, 
+    .contact-wrapper, 
+    .preview-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.25rem !important;
+    }
+
+    main {
+        padding: 1.5rem 1rem !important;
+    }
+
     .footer-container {
         grid-template-columns: 1fr;
         gap: 2rem;
-        text-align: left;
     }
-    
+}
+
+@media (max-width: 600px) {
+    .visual-grid-3, 
+    .visual-grid-2 {
+        grid-template-columns: 1fr !important;
+    }
+
+    .modal-content {
+        width: 95% !important;
+        height: 85vh !important;
+        padding: 1rem !important;
+    }
+
+    .book-btn {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.85rem !important;
+    }
+
     .footer-bottom {
         flex-direction: column;
         gap: 0.5rem;
         text-align: left;
     }
-}
 }
