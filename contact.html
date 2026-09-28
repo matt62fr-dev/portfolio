@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Matthieu Delvallez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">MD.</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parcours.html">Parcours & Atouts</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><button id="themeToggle" class="theme-toggle">☀️ Mode Clair</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="reveal">
+        <section style="text-align: center; margin-bottom: 2.5rem;">
+            <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem;">Donnons vie à vos projets</h1>
+            <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 650px; margin: 0 auto;">
+                Vous recherchez un stagiaire ultra-motivé dès le <strong style="color: var(--text-color);">1er février</strong> pour une durée de 4 à 6 mois, avec une perspective d'alternance en M2 ? Échangeons dès maintenant.
+            </p>
+        </section>
+
+        <div class="contact-wrapper">
+            <!-- COLONNE GAUCHE : Coordonnées & Badge disponibilité -->
+            <div class="contact-info-card">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Informations directes</h3>
+                
+                <a href="tel:0651179714" class="contact-info-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted);">Téléphone</div>
+                        <div style="font-weight: 600;">06 51 17 97 14</div>
+                    </div>
+                </a>
+
+                <a href="mailto:matthieu@delvallez.eu" class="contact-info-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted);">Email professionnel</div>
+                        <div style="font-weight: 600;">matthieu@delvallez.eu</div>
+                    </div>
+                </a>
+
+                <div class="contact-info-item" style="cursor: default;">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted);">Localisation</div>
+                        <div style="font-weight: 600;">Lens / Mobilité vers Lille</div>
+                    </div>
+                </div>
+
+                <a href="https://linkedin.com/in/matthieu-delvallez" target="_blank" class="contact-info-item">
+                    <div class="contact-icon">💼</div>
+                    <div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted);">Réseau professionnel</div>
+                        <div style="font-weight: 600;">LinkedIn / matthieu-delvallez</div>
+                    </div>
+                </a>
+
+                <div style="margin-top: 2rem; padding: 1.25rem; background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.15); border-radius: 12px;">
+                    <div style="font-size: 0.85rem; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 0.25rem;">Disponibilité</div>
+                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Stage de 4 à 6 mois dès le 1er février 2027, suivi d'une alternance en Master 2 Marketing Digital.</p>
+                </div>
+            </div>
+
+            <!-- COLONNE DROITE : Formulaire de contact Web3Forms -->
+            <!-- COLONNE DROITE : Formulaire de contact Web3Forms -->
+            <div class="contact-form-card">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Envoyez-moi un message</h3>
+                
+                <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                    <!-- Clé d'accès Web3Forms -->
+                    <input type="hidden" name="access_key" value="a11c37b1-d24e-4c2c-b519-0713a681aece">
+                    <input type="hidden" name="subject" value="Nouveau message depuis votre Portfolio !">
+                    
+                    <!-- Redirection optionnelle vers une ancre de votre page de contact pour afficher une confirmation -->
+                    <!-- (Ou vous pouvez laisser Web3Forms gérer sans quitter le site en utilisant l'option AJAX ci-dessous) -->
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                    <div class="form-group">
+                        <label for="name">Votre Nom / Entreprise</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="ex: Nom de l'entreprise ou de votre recruteur" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Votre Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="contact@entreprise.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Bonjour Matthieu, je vous contacte concernant votre stage à partir du 1er février..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-accent" style="width: 100%;">
+                        🚀 Envoyer ma proposition
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Matthieu Delvallez | Conçu pour performer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

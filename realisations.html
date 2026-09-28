@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisations & Projets | Matthieu Delvallez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">MD.</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parcours.html">Parcours & Atouts</a></li>
+                <li><a href="realisations.html" class="active">Réalisations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="themeToggle" class="theme-toggle">☀️ Mode Clair</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="reveal">
+        <section style="margin-bottom: 3rem; text-align: center;">
+            <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem;">Mes Réalisations en Détail</h1>
+            <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Découvrez mes missions professionnelles et mes projets universitaires à travers mes supports visuels et créations.</p>
+        </section>
+
+        <!-- Filtres interactifs JavaScript -->
+        <div class="filters" style="justify-content: center; margin-bottom: 3rem;">
+            <button class="filter-btn active" data-filter="all">Tous les projets</button>
+            <button class="filter-btn" data-filter="pro">Expériences Pro</button>
+            <button class="filter-btn" data-filter="uni">Projets & Université</button>
+        </div>
+
+        <!-- PROJET 1 : Volley Club Liévin -->
+        <div class="project-detail-section" data-category="pro">
+            <div class="project-header">
+                <div>
+                    <span class="project-badge">Stage Professionnel</span>
+                    <h2 style="font-size: 2rem; margin-top: 0.5rem;">Volley Club Liévin</h2>
+                </div>
+                <span style="font-size: 0.9rem; color: var(--text-muted);">Réseaux sociaux, Site web & Live Streaming</span>
+            </div>
+            <p class="project-description">
+                Prise en charge de la gestion des réseaux sociaux (Facebook, Instagram), création d'un site internet ergonomique (WordPress) et mise en place d'une chaîne YouTube pour la diffusion en direct des matchs de Nationale 2 Féminine.
+            </p>
+            <div class="visual-grid-3">
+                <div class="visual-box">
+                    <img src="image/site_web_vcl_cookies.png" alt="Site web VCL">
+                </div>
+                <div class="visual-box">
+                    <img src="image/publication_match.png" alt="Publication match VCL">
+                </div>
+                <div class="visual-box">
+                    <img src="image/publication_joueur.png" alt="Publication joueur VCL">
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJET 2 : Le HUB Boulanger -->
+        <!-- PROJET 2 : Le HUB Boulanger -->
+        <div class="project-detail-section" data-category="pro">
+            <div class="project-header">
+                <div>
+                    <span class="project-badge">Stage Professionnel</span>
+                    <h2 style="font-size: 2rem; margin-top: 0.5rem;">Le HUB Boulanger - Lesquin</h2>
+                </div>
+                <span style="font-size: 0.9rem; color: var(--text-muted);">Contenu Digital, IA & Soutenance de Stage</span>
+            </div>
+            <p class="project-description">
+                Assistant chef de projet en contenu digital : réalisation de projets digitaux (génération de descriptifs assistés par IA, pictogrammes, visuels) et analyse des KPI pour la mise en place d'expressions de besoin.
+            </p>
+            <div class="visual-grid-3" style="margin-bottom: 1.5rem;">
+                <div class="visual-box">
+                    <img src="image/manuel_utilisation_1.png" alt="Aperçu Manuel Boulanger">
+                </div>
+                <div class="visual-box">
+                    <img src="image/soutenance_stage_1.png" alt="Aperçu Soutenance Boulanger">
+                </div>
+            </div>
+            
+            <!-- Boutons déclencheurs des deux livres interactifs Boulanger -->
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button id="openBoulangerModal" class="btn btn-accent" style="display: inline-flex; gap: 0.5rem; align-items: center; cursor: pointer;">
+    📖 Ouvrir le manuel d'utilisation (13 pages)
+</button>
+                <button id="openSoutenanceModal" class="btn" style="display: inline-flex; gap: 0.5rem; align-items: center; cursor: pointer;">
+    📊 Ouvrir la soutenance de stage (25 pages)
+</button>
+            </div>
+        </div>
+
+        <!-- PROJET 3 : La Plagne (Livre Interactif) -->
+        <div class="project-detail-section" data-category="pro">
+            <div class="project-header">
+                <div>
+                    <span class="project-badge">Communication Touristique</span>
+                    <h2 style="font-size: 2rem; margin-top: 0.5rem;">Station de La Plagne</h2>
+                </div>
+                <span style="font-size: 0.9rem; color: var(--text-muted);">Interviews Multilingues & Support Interactif</span>
+            </div>
+            <p class="project-description">
+                Réalisation de contenus de communication et d'interviews captivantes en français et en anglais ("Paroles de Skieurs") au cœur de la station, valorisant l'expérience touristique et les activités locales.
+            </p>
+            <div class="visual-grid-3" style="margin-bottom: 1.5rem;">
+                <div class="visual-box">
+                    <img src="image/publication_interview_laplagne.png" alt="Interview La Plagne">
+                </div>
+                <div class="visual-box">
+                    <img src="image/pdf_interactif_laplagne.png" alt="PDF interactif La Plagne">
+                </div>
+                <div class="visual-box">
+                    <img src="image/publication_interview_fr_laplagne.png" alt="Publication calendrier">
+                </div>
+                
+            </div>
+            <!-- Bouton déclencheur du Livre Interactif -->
+            <div style="text-align: center;">
+                <button id="openVideoModal" class="btn btn-accent" style="display: inline-flex; gap: 0.5rem; align-items: center; cursor: pointer;">
+                    Ouvrir le livre interactif de La Plagne
+                </button>
+            </div>
+        </div>
+
+        <!-- PROJET 4 : Discolor Run (Scolaire / Universitaire) -->
+        <div class="project-detail-section" data-category="uni">
+            <div class="project-header">
+                <div>
+                    <span class="project-badge" style="background: rgba(244, 63, 94, 0.1); color: var(--accent); border-color: rgba(244, 63, 94, 0.2);">Projet Universitaire</span>
+                    <h2 style="font-size: 2rem; margin-top: 0.5rem;">Discolor Run</h2>
+                </div>
+                <span style="font-size: 0.9rem; color: var(--text-muted);">Événementiel & Collecte de fonds</span>
+            </div>
+            <p class="project-description">
+                Co-création complète du projet Discolor Run : organisation logistique, recherche de financements, création des supports de communication, de l'affiche officielle et du livret commercial pour les partenaires.
+            </p>
+            <div class="visual-grid-3">
+                <div class="visual-box">
+                    <img src="image/affiche_discolor_run.png" alt="Affiche Discolor Run">
+                </div>
+                <div class="visual-box">
+                    <img src="image/livret_commercial_discolor_run.png" alt="Livret commercial">
+                </div>
+                <div class="visual-box">
+                    <img src="image/photo_discolor_run_1.png" alt="Photo édition Discolor Run">
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJET 5 : Conception Web & Figma (Scolaire / Universitaire) -->
+        <div class="project-detail-section" data-category="uni">
+            <div class="project-header">
+                <div>
+                    <span class="project-badge" style="background: rgba(244, 63, 94, 0.1); color: var(--accent); border-color: rgba(244, 63, 94, 0.2);">Projet Numérique</span>
+                    <h2 style="font-size: 2rem; margin-top: 0.5rem;">Conception Web & Prototypage Figma</h2>
+                </div>
+                <span style="font-size: 0.9rem; color: var(--text-muted);">UX/UI Design & Intégration</span>
+            </div>
+            <p class="project-description">
+                Prototypage de plateformes web sur Figma et WordPress (projet Cohésia pour l'intégration IUT et site web fitness) en respectant les chartes graphiques et les parcours utilisateurs (UX).
+            </p>
+            <div class="visual-grid-2">
+                <div class="visual-box">
+                    <img src="image/cohésia.png" alt="Maquette Cohésia">
+                </div>
+                <div class="visual-box">
+                    <img src="image/huok_fitness.png" alt="Site Huok Fitness">
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJET 6 : Communication et réseaux sociaux (Scolaire / Universitaire) -->
+        <div class="project-detail-section" data-category="pro">
+            <div class="project-header">
+                <div>
+                    <span class="project-badge">Stratégie & Social Media</span>
+                    <h2 style="font-size: 2rem; margin-top: 0.5rem;">Communication & Réseaux Sociaux</h2>
+                </div>
+                <span style="font-size: 0.9rem; color: var(--text-muted);">Création de Contenu & Brand Content</span>
+            </div>
+            <p class="project-description">
+                Conception et déploiement de stratégies éditoriales ciblées : élaboration de calendriers de publication, création de visuels percutants et animation de communautés pour renforcer l'engagement et l'identité de marque.
+            </p>
+            <div class="visual-grid-3">
+                <div class="visual-box">
+                    <img src="image/creation_support_apple.png" alt="Support visuel Apple">
+                </div>
+                <div class="visual-box">
+                    <img src="image/creation_fiche_produit.png" alt="Création fiche produit">
+                </div>
+                <div class="visual-box">
+                    <img src="image/creation_apple.png" alt="Visuel publicitaire">
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJET 7 : Entrepreneuriat & Innovation (Scolaire / Universitaire) -->
+        <div class="project-detail-section" data-category="uni">
+            <div class="project-header">
+                <div>
+                    <span class="project-badge" style="background: rgba(244, 63, 94, 0.1); color: var(--accent); border-color: rgba(244, 63, 94, 0.2);">Innovation & Entrepreneuriat</span>
+                    <h2 style="font-size: 2rem; margin-top: 0.5rem;">Innovation Vélo Électrique & Analyse INPI</h2>
+                </div>
+                <span style="font-size: 0.9rem; color: var(--text-muted);">Méthodes Créatives & Brevet</span>
+            </div>
+            <p class="project-description">
+                Utilisation de méthodes créatives (Chapeaux de Bono, Mashup, SCAMPER), réalisation d'une analyse de l'existant sur la base de données de l'INPI, et conception d'un storyboard avec interfaces produit.
+            </p>
+            <div class="visual-grid-3">
+                <div class="visual-box">
+                    <img src="image/storyboard_velo.png" alt="Storyboard vélo">
+                </div>
+                <div class="visual-box">
+                    <img src="image/interface_velo.png" alt="Interface vélo">
+                </div>
+                <div class="visual-box">
+                    <img src="image/interface_telephone.png" alt="Interface téléphone">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Fenêtre Modale 1 : Livre Interactif La Plagne -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <button id="closeVideoModal" class="close-modal">&times;</button>
+            <div class="book-container">
+                <div class="book-page active"><img src="image/pdf_page_1.png" alt="Page 1"></div>
+                <div class="book-page"><img src="image/pdf_page_2.png" alt="Page 2"></div>
+                <div class="book-page"><img src="image/pdf_page_3.png" alt="Page 3"></div>
+                <div class="book-page"><img src="image/pdf_page_4.png" alt="Page 4"></div>
+            </div>
+            <div class="book-nav">
+                <button id="prevPage" class="book-btn">← Précédent</button>
+                <span id="pageIndicator" class="page-indicator">Page 1 / 4</span>
+                <button id="nextPage" class="book-btn">Suivant →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fenêtre Modale 2 : Livre Interactif Le HUB Boulanger (13 pages) -->
+    <div id="boulangerModal" class="video-modal">
+    <div class="modal-content">
+        <button id="closeBoulangerModal" class="close-modal">&times;</button>
+            
+            <div class="book-container">
+                <div class="boulanger-page active"><img src="image/manuel_utilisation_1.png" alt="Page 1"></div>
+                <div class="boulanger-page"><img src="image/manuel_utilisation_2.png" alt="Page 2"></div>
+                <div class="boulanger-page"><img src="image/manuel_utilisation_3.png" alt="Page 3"></div>
+                <div class="boulanger-page"><img src="image/manuel_utilisation_4.png" alt="Page 4"></div>
+                <div class="boulanger-page"><img src="image/manuel_utilisation_5.png" alt="Page 5"></div>
+                <div class="boulanger-page"><img src="image/manuel_utilisation_6.png" alt="Page 6"></div>
+                <div class="boulanger-page"><img src="image/manuel_utilisation_7.png" alt="Page 7"></div>
+                <div class="boulanger-page"><img src="image/manuel_utilisation_8.png" alt="Page 8"></div>
+                <div class="boulanger-page"><img src="image/manuel_utilisation_9.png" alt="Page 9"></div>
+                <div class="boulanger-page"><img src="image/manuel_utilisation_10.png" alt="Page 10"></div>
+                <div class="boulanger-page"><img src="image/manuel_utilisation_11.png" alt="Page 11"></div>
+                <div class="boulanger-page"><img src="image/manuel_utilisation_12.png" alt="Page 12"></div>
+                <div class="boulanger-page"><img src="image/manuel_utilisation_13.png" alt="Page 13"></div>
+            </div>
+
+            <div class="book-nav">
+            <button id="prevBoulanger" class="book-btn">← Précédent</button>
+            <span id="boulangerIndicator" class="page-indicator">Page 1 / 13</span>
+            <button id="nextBoulanger" class="book-btn">Suivant →</button>
+        </div>
+    </div>
+</div>
+    <!-- Fenêtre Modale : Livre Interactif Soutenance de Stage (25 pages) -->
+    <div id="soutenanceModal" class="video-modal">
+        <div class="modal-content">
+            <button id="closeSoutenanceModal" class="close-modal">&times;</button>
+            
+            <div class="book-container">
+                <div class="soutenance-page active"><img src="image/soutenance_stage_1.png" alt="Page 1"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_2.png" alt="Page 2"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_3.png" alt="Page 3"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_4.png" alt="Page 4"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_5.png" alt="Page 5"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_6.png" alt="Page 6"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_7.png" alt="Page 7"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_8.png" alt="Page 8"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_9.png" alt="Page 9"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_10.png" alt="Page 10"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_11.png" alt="Page 11"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_12.png" alt="Page 12"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_13.png" alt="Page 13"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_14.png" alt="Page 14"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_15.png" alt="Page 15"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_16.png" alt="Page 16"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_17.png" alt="Page 17"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_18.png" alt="Page 18"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_19.png" alt="Page 19"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_20.png" alt="Page 20"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_21.png" alt="Page 21"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_22.png" alt="Page 22"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_23.png" alt="Page 23"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_24.png" alt="Page 24"></div>
+                <div class="soutenance-page"><img src="image/soutenance_stage_25.png" alt="Page 25"></div>
+            </div>
+
+            <div class="book-nav">
+                <button id="prevSoutenance" class="book-btn">← Précédent</button>
+                <span id="soutenanceIndicator" class="page-indicator">Page 1 / 25</span>
+                <button id="nextSoutenance" class="book-btn">Suivant →</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Matthieu Delvallez | Conçu pour performer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
