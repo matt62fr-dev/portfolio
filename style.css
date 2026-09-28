@@ -221,13 +221,39 @@ main {
     line-height: 1.8;
 }
 
-/* --- GRILLES DE VISUELS (RECTIFIÉES) --- */
+/* --- GRILLES DE VISUELS (2 colonnes & 3 colonnes) --- */
 .visual-grid-2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     align-items: center;
     margin-bottom: 1.5rem;
+}
+
+.visual-grid-2 .visual-box {
+    height: 280px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem;
+}
+
+.visual-grid-2 .visual-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.visual-grid-2 .visual-box:hover img {
+    transform: scale(1.02);
 }
 
 .visual-grid-3 {
