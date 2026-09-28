@@ -793,4 +793,70 @@ textarea.form-control {
         text-align: center;
         justify-content: center;
     }
+    /* --- Footer Professionnel & Élégant --- */
+.site-footer {
+    background-color: var(--card-bg);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2.5rem 2rem;
+    margin-top: 4rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo {
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    letter-spacing: -0.05em;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.footer-right p {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* --- Responsive Footer sur Mobile --- */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
 }
